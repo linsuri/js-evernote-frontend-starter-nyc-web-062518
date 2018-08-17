@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Evernote</title>
+    <style>
+      input[type=text] {
+        font-size: 15px;
+        width: 95%;
+        padding: 3px;
+        margin: 2px;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+      input[type=text]:focus {
+        border: 3px solid #555;
+      }
+      input[type=submit] {
+        font-size: 15px;
+        background-color: #ccc;
+        border: none;
+        color: #111;
+        padding: 10px 30px;
+        text-decoration: none;
+        cursor: pointer;
+        width: 95%
+      }
+      textarea {
+        font-size: 15px;
+        height: 100px;
+        width: 95%;
+        padding: 3px;
+        margin: 2px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+      textarea:focus {
+        border: 3px solid #555;
+      }
+      .side-bar {
+        height: 100%; /* Full-height: remove this if you want "auto" height */
+        width: 30%; /* Set the width of the sidebar */
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        color: white;
+      }
+      .all-notes {
+        font-size: 25px;
+        padding: 15px;
+      }
+      .create-notes {
+        position: absolute;
+        left: 30%;
+        height: 27%;
+        width: 70%;
+        padding: 25px;
+        bottom: 0;
+      }
+      .show-note {
+        position: absolute;
+        left: 30%;
+        width: 70%;
+        padding: 25px;
+        top: 0;
+      }
+      #evernote {
+        font-size: 40px;
+        height: 50px;
+        padding: 15px;
+      }
+      #note-title {
+        font-size: 20px;
+        padding: 10px;
+      }
+      #create-notes-text {
+        font-size: 20px;
+        text-align: center;
+        padding: 5px;
+      }
+      #user {
+        font-size: 20px;
+      }
+      #note-details {
+        padding: 25px 15px 15px 5px;
+      }
+      #detail-title {
+        font-size: 25px;
+        padding: 5px;
+      }
+      #detail-body {
+        font-size: 20px;
+        padding: 5px 5px 20px 5px;
+      }
+      #update-button, #delete-button {
+        font-size: 15px;
+        background-color: #ccc;
+        border: none;
+        color: #111;
+        padding: 10px 30px;
+        text-decoration: none;
+        cursor: pointer;
+        width: 48%
+      }
+    </style>
+  </head>
+  <body>
+    <!-- side bar -->
+    <div class="side-bar">
+      <div id="evernote">Evernote</div>
+      <div class="all-notes">Your Notes
+        <div id="note-title">
+        </div>
+      </div>
+    </div>
+
+    <!-- show note -->
+    <div class="show-note">
+      <div id="user"></div>
+      <div id="note-details">
+      </div>
+      <button id="update-button">Update</button>
+      <button id="delete-button">Delete</button>
+    </div>
+
+    <!-- create notes -->
+    <div class="create-notes">
+      <div id="create-notes-text">Create New Note</div>
+      <input id="create-title" type="text" name="" placeholder="Title">
+      <br>
+      <textarea id="create-body" placeholder="Your note"></textarea>
+      <br>
+      <input id="create-note-button" type="submit" value="Create note">
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
